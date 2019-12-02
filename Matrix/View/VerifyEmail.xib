@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyEmail" customModule="Matrix" customModuleProvider="target">
+            <connections>
+                <outlet property="emailIdTextField" destination="GuJ-H8-nia" id="hC1-eb-yd8"/>
+                <outlet property="submitButton" destination="7VO-Vj-MKo" id="6zi-rX-aC4"/>
+                <outlet property="view" destination="iN0-l3-epB" id="pjw-AD-AG8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Email Id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8H-5D-L5C">
+                    <rect key="frame" x="10" y="64" width="394" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Id" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuJ-H8-nia">
+                    <rect key="frame" x="10" y="105" width="394" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="4Fw-7Z-K7B"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYc-t3-UzO">
+                    <rect key="frame" x="10" y="137" width="394" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="kwI-9e-W2K"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VO-Vj-MKo">
+                    <rect key="frame" x="108.5" y="158" width="197" height="40"/>
+                    <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="wCY-Jt-Oc8"/>
+                    </constraints>
+                    <state key="normal" title="Submit">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="submitAction:" destination="-1" eventType="touchUpInside" id="k4p-nu-Fxe"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GuJ-H8-nia" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="EjA-eB-OGs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7VO-Vj-MKo" secondAttribute="bottom" constant="22" id="GmY-XJ-hsI"/>
+                <constraint firstItem="ZYc-t3-UzO" firstAttribute="trailing" secondItem="GuJ-H8-nia" secondAttribute="trailing" id="M1z-4K-fuf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GuJ-H8-nia" secondAttribute="trailing" constant="10" id="PcG-iu-e2C"/>
+                <constraint firstItem="7VO-Vj-MKo" firstAttribute="top" secondItem="ZYc-t3-UzO" secondAttribute="bottom" constant="20" id="TQX-VF-gum"/>
+                <constraint firstItem="GuJ-H8-nia" firstAttribute="top" secondItem="z8H-5D-L5C" secondAttribute="bottom" constant="20" id="afo-wK-Q6V"/>
+                <constraint firstItem="z8H-5D-L5C" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="bV6-K3-Jwg"/>
+                <constraint firstItem="ZYc-t3-UzO" firstAttribute="top" secondItem="GuJ-H8-nia" secondAttribute="bottom" constant="2" id="ces-nK-VdW"/>
+                <constraint firstItem="7VO-Vj-MKo" firstAttribute="width" secondItem="GuJ-H8-nia" secondAttribute="width" multiplier="0.5" id="eFo-XD-pwL"/>
+                <constraint firstItem="7VO-Vj-MKo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mIt-sj-Wlx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="z8H-5D-L5C" secondAttribute="trailing" constant="10" id="oit-c6-adl"/>
+                <constraint firstItem="z8H-5D-L5C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="tES-qZ-vBK"/>
+                <constraint firstItem="ZYc-t3-UzO" firstAttribute="leading" secondItem="GuJ-H8-nia" secondAttribute="leading" id="wA9-Gw-T93"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="116"/>
+        </view>
+    </objects>
+</document>
