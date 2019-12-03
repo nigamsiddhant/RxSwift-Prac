@@ -16,8 +16,9 @@ class DetailTableViewCell: UITableViewCell {
     @IBOutlet weak var avatar: UIImageView!
     var userData: Details! {
         didSet {
+            let placeHolder = UIImage.init(named: "user")
             if let imgUrl = URL(string: userData.imageUrl ?? "") {
-                avatar.kf.setImage(with: imgUrl)
+                avatar.kf.setImage(with: imgUrl,placeholder: placeHolder)
             }
             let name = userData.firstName ?? " "
             let lastName = userData.lastName ?? " "

@@ -51,3 +51,8 @@ struct ApiHandler {
     
 }
 
+class Connectivity {
+    class var isConnectedToInternet:Bool {
+        return NetworkReachabilityManager()?.isReachable ?? false
+    }
+}

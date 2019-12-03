@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         setupView()
+        
     }
     
     private func setupView() {
@@ -40,17 +41,9 @@ class ViewController: UIViewController {
         
         present(popup, animated: true, completion: nil)
     }
-
     
-
-}
-
-extension ViewController: EmailSubmitted {
-    func emailSubmitted(success: Bool, emailId: String) {
-        if success {
-            print(emailId)
-            
-            let params = RequestParams(emailId: emailId)
+    private func getUserDetails(emailId: String) {
+        let params = RequestParams(emailId: emailId)
             
             do {
                 let paramsDict = try params.asDictionary()
@@ -72,6 +65,12 @@ extension ViewController: EmailSubmitted {
                         UIUtility.showErrorAlert("", message: error.localizedDescription)
                     }, onCompleted: {
                         print("Completed")
+                        CoreDataHandler.shared.deleteAllData { (success) in
+                            if success{
+                                CoreDataHandler.shared.addDataToDatabase(details: self.itemArray)
+                            }
+                        }
+                        
                     }) {
                         print("disposed")
                         
@@ -81,10 +80,28 @@ extension ViewController: EmailSubmitted {
                 
             }
             catch {
-                
+                UIUtility.showErrorAlert("", message: "Something Went Wrong.")
             }
             
+        
+    }
+
+    
+
+}
+
+extension ViewController: EmailSubmitted {
+    func emailSubmitted(success: Bool, emailId: String) {
+        if success {
+            if Connectivity.isConnectedToInternet {
+                self.getUserDetails(emailId: emailId)
+            }
+            else {
+                self.itemArray = CoreDataHandler.shared.fetchDetails()
+                self.tableView.reloadData()
+            }
         }
+            
     }
     
     
@@ -111,3 +128,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 100
     }
 }
+

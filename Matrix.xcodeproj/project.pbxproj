@@ -21,6 +21,8 @@
 		E18083D22395949C00A4C12C /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18083D12395949C00A4C12C /* Details.swift */; };
 		E18083D423959BE500A4C12C /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18083D323959BE500A4C12C /* DetailTableViewCell.swift */; };
 		E18083D623959C8A00A4C12C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18083D523959C8A00A4C12C /* CardView.swift */; };
+		E1EEA75A2396D03900D554C8 /* Matrix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1EEA7582396D03900D554C8 /* Matrix.xcdatamodeld */; };
+		E1EEA75C2396D1DF00D554C8 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EEA75B2396D1DF00D554C8 /* CoreDataHandler.swift */; };
 		E9BBFCF79846BC12FD3DA9E4 /* Pods_Matrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6CFA36DC4DB6024CC95238 /* Pods_Matrix.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		E18083D12395949C00A4C12C /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		E18083D323959BE500A4C12C /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		E18083D523959C8A00A4C12C /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E1EEA7592396D03900D554C8 /* Matrix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Matrix.xcdatamodel; sourceTree = "<group>"; };
+		E1EEA75B2396D1DF00D554C8 /* CoreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				E18083AE2395735100A4C12C /* SceneDelegate.swift */,
 				E18083B72395735700A4C12C /* LaunchScreen.storyboard */,
 				E18083BA2395735700A4C12C /* Info.plist */,
+				E1EEA7582396D03900D554C8 /* Matrix.xcdatamodeld */,
 			);
 			path = Matrix;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 				E18083CA23958CD600A4C12C /* UIUtility.swift */,
 				E18083CC2395921000A4C12C /* Constants.swift */,
 				E18083D523959C8A00A4C12C /* CardView.swift */,
+				E1EEA75B2396D1DF00D554C8 /* CoreDataHandler.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18083D423959BE500A4C12C /* DetailTableViewCell.swift in Sources */,
+				E1EEA75C2396D1DF00D554C8 /* CoreDataHandler.swift in Sources */,
 				E18083B12395735100A4C12C /* ViewController.swift in Sources */,
 				E18083C9239581D900A4C12C /* VerifyEmail.swift in Sources */,
 				E18083AD2395735100A4C12C /* AppDelegate.swift in Sources */,
@@ -297,6 +304,7 @@
 				E18083AF2395735100A4C12C /* SceneDelegate.swift in Sources */,
 				E18083D22395949C00A4C12C /* Details.swift in Sources */,
 				E18083CD2395921000A4C12C /* Constants.swift in Sources */,
+				E1EEA75A2396D03900D554C8 /* Matrix.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +506,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E1EEA7582396D03900D554C8 /* Matrix.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E1EEA7592396D03900D554C8 /* Matrix.xcdatamodel */,
+			);
+			currentVersion = E1EEA7592396D03900D554C8 /* Matrix.xcdatamodel */;
+			path = Matrix.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E18083A12395735000A4C12C /* Project object */;
 }
